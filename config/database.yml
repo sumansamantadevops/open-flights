@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: open-flights_development
+  #database: open-flights_development
+username: <%= ENV['POSTGRES_USER'] %>
+password: <%= ENV['POSTGRES_PASSWORD'] %>
+host: <%= ENV['POSTGRES_USER'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
